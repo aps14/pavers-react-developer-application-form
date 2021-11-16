@@ -90,18 +90,11 @@ function ApplicantForm() {
                 <Row>
                     <Col>
                         <Row>
-                            <Col>
+                            <Col >
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control required
-                                    maxLength={50} type="text" placeholder="Enter full name..."
-                                    onChange={(e) => setApplicantName(e.target.value)}/>
-                            </Col>
-                            <Col>
-                                <Form.Label>Date of Application</Form.Label>
-                                <Form.Control required
-                                    type="date"
-                                    defaultValue={new Date().toISOString().split('T')[0]}
-                                    onChange={(e) => setDateOfApplication(e.target.value)}/>
+                                              maxLength={50} type="text" placeholder="Enter full name..."
+                                              onChange={(e) => setApplicantName(e.target.value)}/>
                             </Col>
                         </Row>
                         <Row>
@@ -110,6 +103,15 @@ function ApplicantForm() {
                                 <Form.Control required
                                     maxLength={100} type="email" placeholder="Enter email..."
                                     onChange={(e) => setApplicantEmail(e.target.value)}/>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col style={{marginTop: '20px'}}>
+                                <Form.Label>Date of Application</Form.Label>
+                                <Form.Control required
+                                              type="date"
+                                              defaultValue={new Date().toISOString().split('T')[0]}
+                                              onChange={(e) => setDateOfApplication(e.target.value)}/>
                             </Col>
                         </Row>
                     </Col>
